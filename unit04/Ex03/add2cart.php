@@ -5,10 +5,6 @@ session_start();
 
 include_once('data.php');
 $MaSP = $_GET['MaSP'];
-// echo $MaSP;
-// echo "<pre>";
-// 	echo print_r($products[$MaSP]);
-// echo "</pre>";
 if (isset($_SESSION['cart'][$MaSP])) {
 	$_SESSION['cart'][$MaSP]['SoLuong']++;
 }else{

@@ -23,10 +23,14 @@ if (isset($_COOKIE['unset'])) {
 <body>
 	<div class="content">
 		<h1 style="text-align: center;">GIỎ HÀNG</h1>
-		<div class="alert alert-danger" role="alert" style="text-align: center;">
-			<?php echo $unset ?>
-		</div>
-
+		<?php 
+            if (isset($_COOKIE['unset'])) {
+        ?> 
+            <div class="alert alert-success" style="text-align: center;">
+                <?php  echo $_COOKIE['unset']; ?>
+                
+            </div>
+         <?php } ?>
 		<table class="table" style="margin-left: 80px;width: 80%;">
 			<thread>
 				<th>STT</th>
